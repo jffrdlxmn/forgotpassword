@@ -1,0 +1,57 @@
+.cvsu-header{
+  width:65%;
+  height: auto;
+}
+.voting-header{
+    background-color: #003e21;
+    color:white;
+    text-align: center;
+    font-size: 25px;
+}
+
+.candidate{
+    font-size:0.7rem;
+    font-weight: bold;
+}
+.candidate-position{
+  font-size: 17px;
+  font-weight: bold;
+  color: #003e21;
+}
+
+.vote{
+display: flex;
+justify-content: center;
+margin: auto;
+
+}
+.btn-success {
+  background-color: #003e21;
+  border-color:#004d28 ;
+}
+.btn-success:hover{
+  background-color: #003e21;
+  
+}
+
+
+/* On screens that are 992px or less, set the background color to blue */
+@media screen and (max-width: 992px) {
+  .cvsu-header{
+    width:100%;
+  }
+  
+}
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+  .cvsu-header{
+    width:100%;
+    height: auto;
+    
+  }
+  .candidate{
+    font-size:.7rem;
+    font-weight: bold;
+  }
+}

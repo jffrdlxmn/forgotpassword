@@ -1,0 +1,199 @@
+.field-icon {
+  float: right;
+  margin-left: 4px;
+  margin-right: 45px;
+  margin-top: -25px;
+  position: relative;
+  z-index: 4;
+}
+
+
+
+#message{
+  color:#e6ad3e ;
+  font-size:12px;
+  text-align: start;
+  margin-bottom:5px;
+}
+
+#login-background{
+  background: url('../../dist/img/login.png') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  overflow: hidden;
+  height: 100%;
+}
+
+.login-card{
+
+  margin:auto;
+  margin-top: 100px;
+  width: 22rem;
+  background-color: #101820;
+  border-radius: 40px;
+}
+
+.login-body{
+
+  padding: 10px;
+}
+
+.input-group-text
+{
+  background-color:#e6ad3e;
+  color:white;
+}
+input[type],select{
+
+  border-color:#004d28;
+  transition: ease-in-out, width .35s ease-in-out;
+}
+input[type]:focus,select:focus{
+  border-color:#e6ad3e;
+  transition: ease-in-out, width .35s ease-in-out;
+}
+
+
+
+
+
+  
+.btn-login, .btn-register{
+  background-color: #004d28;
+  border-color:#004d28 ;
+}
+
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    z-index: 1000; /* Sit on top */
+    padding-top: 80px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  
+  }
+  
+  
+  /* Modal Content */
+  .modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 100;
+    border: 1px solid #888;
+    width: 40%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+      border-radius:25px;
+  }
+  
+  /* Add Animation */
+  @-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+  }
+  
+  @keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+  }
+  
+  /* The Close Button */
+  .close {
+    color: rgba(0,0,0,0.5);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  /* The Close Button */
+  .closex {
+    color: rgba(0,0,0,0.5);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor:p
+  }
+  /* The Close Button */
+  .closey {
+    color: rgba(0,0,0,0.5);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor:p
+  }
+  /* The Close Button */
+  .closeupload {
+    color: rgba(0,0,0,0.5);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor:p
+  }
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .closex:hover,
+  .closex:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .closey:hover,
+  .closey:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .closeupload:hover,
+  .closeupload:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .modal-header {
+    padding-top:5px;
+    padding-right:8px;
+    background-color: white;
+    border-bottom: solid rgba(0,0,0,0.3) 0.5px;
+    color: white;
+    height:40px;
+  }
+  
+  .modal-body {padding: 2px 16px;}
+  
+  .modal-footer {
+    
+    background-color: white;
+    border-top: solid rgba(0,0,0,0.3) 0.5px;
+    color: black;
+    height:70px;
+  }
+  
+  input[type="date"]:before{
+    color:lightgray;
+    content:attr(placeholder);
+  }
+  
+  input[type="date"].full:before {
+    color:black;
+    content:""!important;
+  }
+
+  
+  
