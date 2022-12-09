@@ -1,9 +1,9 @@
 <?php
-    include("model/studentPortalModel.php");
-    $student = new studentPortal();
+    include("model/employeePortalModel.php");
+    $student = new employeePortal();
 
-    if(isset($_POST["studentNumber"],$_POST["confirmPassword"])){
-        $received = $student->resetPassword($_POST["studentNumber"],$_POST['confirmPassword']);
+    if(isset($_POST["email"],$_POST["token"],$_POST["confirmPassword"])){
+        $received = $student->resetPassword($_POST["email"],$_POST["token"],$_POST['confirmPassword']);
         if($received == 1)echo '1';   
         
     }

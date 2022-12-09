@@ -22,6 +22,18 @@ function warningfunction(warningvar){
 	})
 }
 
+function successSend(successvar){
+	Swal.fire({
+	  position: 'center',
+	  icon: 'success',
+	  text: successvar,
+	  showConfirmButton: false,
+	  allowOutsideClick: true,
+	  timer: 1000,
+	  allowEscapeKey: true
+	})
+}
+
 function successfunction(successVar){
 	
 	Swal.fire({
