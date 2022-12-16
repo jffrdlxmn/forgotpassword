@@ -33,13 +33,10 @@
 <div class="login-box">
  
   <div class="card login-card p-5">
-    <div class="card-body text-white">
-    <h2 class="text-success">Sorry, your token expired!</h2>
+    <div class="card-body text-white  text-center">
+    <h3 class="text-success">Sorry, your token expired!</h3>
         <p>We'll need to re-send your authentication email.</p>
         <a class="btn btn-success w-100" href="index.php">Resend the authentication email</a>
-    
-   
-
     </div>
     <!-- /.change password-card-body -->
   </div>

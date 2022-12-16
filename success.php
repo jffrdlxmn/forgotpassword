@@ -29,20 +29,29 @@
 
 <body id="login-background" class="hold-transition login-page">
 
-
+<!-- .success start -->
 <div class="login-box">
- 
   <div class="card login-card p-5">
     <div class="card-body text-white text-center">
-    <h2 class="text-success">404 Page not found </h2>
-    <small>The page you are looking for doesn't exist or an other error occurred.</small>
-    <a class="btn btn-success w-100" href="index.php">Resend the authentication email</a>
-       
+    <h3 class="text-success"> Your password has been change successfully.</h3>
+        <p>You can login with your new password.</p>
+        <a class="btn btn-success w-100" href="https://cvsu-rosario.edu.ph/Teacher_Portal/teacher_portal.php">Continue to Login</a>
     </div>
     <!-- /.change password-card-body -->
   </div>
 </div>
-<!-- /.change password-box -->
+<!-- /.success password-box -->
+
+
+
+
+
+
+
+
+
+
+
 
 
 <!-- jQuery -->

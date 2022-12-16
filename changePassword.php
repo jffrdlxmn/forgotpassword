@@ -7,10 +7,9 @@
 
   if(!isset($token,$email))header("location:404.php");
   $checkToken =  $check->checkToken($token,$email);
+
   if($checkToken == "2")  header("location:expiredToken.php");
   elseif($checkToken == "0")  header("location:404.php");
-  
-
 
 
 ?>
@@ -43,51 +42,30 @@
    <link rel="stylesheet" href="dist/css/style.css">
 
 </head>
+<!-- change password start -->
 
 <body id="login-background" class="hold-transition login-page">
-
-
 <div class="login-box">
- 
   <div class="card login-card">
-    <div class="card-header text-center mt-1 text-success">
-			<h2>Reset Password</h2>
-     
-		</div>
-    <div class="card-body ">
-      <span id="message"></span>
-
-      <div> 
-            
-        <p class="text-white mb-0">New Password</p>     
-        <input type="password" class="form-control "  id="newPassword"  placeholder="New Password " onkeydown="if (event.keyCode == 13){resetPassword();}">
-        <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password" id="showNewPass"></span>
-        <p class="text-white mb-0">Confirm Password</p>     
-        <input type="password" class="form-control "  id="confirmPassword"  placeholder="Confrim Password " onkeydown="if (event.keyCode == 13){resetPassword();}">
-        <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password" id="showCFPass"></span>
-            
+      <div class="card-header text-center mt-1 text-success">
+        <h2>Reset Password</h2>
       </div>
+      <div class="card-body ">
+        <span id="message"></span>
+        <div>    
+          <p class="text-white mb-0">New Password</p>     
+          <input type="password" class="form-control "  id="newPassword"  placeholder="New Password " onkeydown="if (event.keyCode == 13){resetPassword();}">
+          <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password" id="showNewPass"></span>
+          <p class="text-white mb-0">Confirm Password</p>     
+          <input type="password" class="form-control "  id="confirmPassword"  placeholder="Confrim Password " onkeydown="if (event.keyCode == 13){resetPassword();}">
+          <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password" id="showCFPass"></span>
           <button class="btn btn-success mt-2 mb-5 w-100 btn-login" onclick="resetPassword();"  >Continue</button><br>
+        </div>
       </div>
-    
-   
-
-    </div>
     <!-- /.change password-card-body -->
   </div>
 </div>
 <!-- /.change password-box -->
-
-
-
-
-
-
-
-
-
-
-
 
 
 <!-- jQuery -->
@@ -148,14 +126,11 @@ $('#showCFPass').on('click', function(){
 })
 
 
-
-
-
-
 </script>
 <script>
 function resetPassword()
 {
+
 
   var email = "<?php echo $email; ?>";
   var token = "<?php echo $token; ?>";
@@ -189,10 +164,7 @@ function resetPassword()
     success: function(data){
         if(data == 1)
         {
-
-            $('#message').html("<i class='fas fa-check-circle' text-success> </i> Your password has been change successfully."); 
-            $('#newPassword').val('');
-            $('#confirmPassword').val('');
+            window.location = "sucess.php";
         }
         else{
             $('#message').html("<i class='fas fa-check-circle' text-success> </i> Password Resettng Failed!") +data; 

@@ -30,19 +30,15 @@
 
 <body id="login-background" class="hold-transition login-page">
 
-
+<!-- reset password start -->
 <div class="login-box">
- 
   <div class="card login-card">
     <div class="card-header text-center mt-1 text-success">
 			<h2>Forgot Password</h2>
-     
 		</div>
     <div class="card-body ">
       <span id="message"></span>
-
       <div> 
-
           <p class="text-white mb-0">Enter your email address</p>
           <div class="input-group mb-3">
             <input type="email" class="form-control"  id="email"  placeholder="Email " onkeydown="if (event.keyCode == 13){verifyEmail();}">
@@ -54,41 +50,11 @@
             <button class="btn btn-success mt-2 mb-5 w-100 btn-login" onclick="verifyEmail();" id ="step1" >Continue</button><br>
           </div>
       </div>
-    
-   
-
     </div>
-    <!-- /.login-card-body -->
+    <!-- /.reset-card-body -->
   </div>
 </div>
-<!-- /.login-box -->
-
-<!-- <div class="card login-card p-0" >
-	<center>
-		<div class="card-header text-center mt-1 text-success">
-			<h2>Forgot Password</h2>
-
-
-		</div>
-		<div class="card-body">
-       <span id="message"></span>
-       <div class ="text-left mx-4 text-white">
-        <small class="text-right">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Enter your email address</small>
-      </div>
-			<input type="email" class="form-control w-75" id="email" onkeydown="if (event.keyCode == 13){resetPassword();}"> 
-      
-      <button class="btn btn-success mt-2 mb-5 w-75 btn-login" onclick="resetPassword();" >Continue</button><br>
->
-		</div>
-	</center>
-</div> -->
-
-
-
-
-
-
-
+<!-- /.reset-box -->
 
 
 
@@ -129,17 +95,15 @@
 
 <script>
 
-
+// function for checking Email if existing and sending to email
 function verifyEmail()
 {
-
 
   if($('#email').val() == "" ) 
   {
   $('#message').html( "<i class='fas fa-exclamation-circle'> </i> Please fill up the fields.");
   return false;
   }
-
 
   $.ajax({
     url: "checkEmailExist.php",
@@ -191,100 +155,6 @@ function verifyEmail()
   });   
 
 }
-
-
-
-
-
-// $('#showNewPass').on('click', function(){
-//       $(this).toggleClass("fa-eye fa-eye-slash");
-//       var passInput=$("#newPassword");
-//       if(passInput.attr('type')==='password')
-//         {
-//           passInput.attr('type','text');
-//       }else{
-//          passInput.attr('type','password');
-//       }
-// })
-// $('#showCFPass').on('click', function(){
-//       $(this).toggleClass("fa-eye fa-eye-slash");
-//       var passInput=$("#confirmPassword");
-//       if(passInput.attr('type')==='password')
-//         {
-//           passInput.attr('type','text');
-//       }else{
-//          passInput.attr('type','password');
-//       }
-// })
-
-// </script>
-
- <script>
-// function resetPassword()
-// {
-
-//   if($('#username').val() == "" || $('#studentNumber').val() == "" || $('#newPassword').val() == "" || $('#confirmPassword').val() == "") 
-//   {
-//   $('#message').html( "<i class='fas fa-exclamation-circle'> </i> Please fill up all fields.");
-//   return false;
-//   }
-
-
-
-//   $.ajax({
-//     url: "checkStudentExist.php",
-//     type: "POST",
-//     cache: false,
-//     data:{
-//       studentNumber: $('#studentNumber').val(),
-//       username: $('#username').val(),
-//     },
-//     success: function(data){
-//       if(data == 1)
-//       {
-//         if ($('#newPassword').val().length < 6)
-//         {
-//           $('#message').html( "<i class='fas fa-exclamation-circle'> </i>Password must be 6 characters and above."); 
-//           return false;
-//         }
-//         if( $('#newPassword').val() !=  $('#confirmPassword').val()) 
-//         {
-//           $('#message').html("<i class='fas fa-exclamation-circle'> </i> New password and Confirm password does not match."); 
-//           return false;
-//         }
-//         $.ajax({
-//           url: "resetPassword.php",
-//           type: "POST",
-//           cache: false,
-//           data:{
-//             studentNumber: $('#studentNumber').val(),
-//             confirmPassword: $('#confirmPassword').val()
-//           },
-//           success: function(studentdata){
-//               if(data == 1)
-//               {
-      
-//                   $('#message').html("<i class='fas fa-check-circle' text-success> </i> Your password has been change successfully."); 
-//                   $('#username').val('');
-//                   $('#studentNumber').val('');
-//                   $('#newPassword').val('');
-//                   $('#confirmPassword').val('');
-//               }
-//               else{
-//                   $('#message').html("<i class='fas fa-check-circle' text-success> </i> Password Resettng Failed!"); 
-//               }
-//           }
-//         });
-//       }
-//       else{ 
-//         $('#message').html(innerHTML= "<i class='fas fa-exclamation-circle'> </i> " + data);
-//         return false;
-//       }
-      
-//     }
-//   });   	
-// }
-
 
 </script>
 

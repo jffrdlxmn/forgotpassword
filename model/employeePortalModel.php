@@ -58,16 +58,16 @@
 		
 		function checkToken($token,$email)
 		{
-			$dateNOW = date("d-m-Y H:i:s");	
+			$dateNOW = date("Y-m-d H:i:s");	
 			$tokenData = array();
 			$sql = "SELECT * FROM forgatpassword_code WHERE `token`=? AND `email`=?";
 			$stmt = $this->db->prepare($sql);
 			$stmt->execute(array($token,$email));
             $tokenData = $stmt->fetch(PDO::FETCH_ASSOC);
 			if($tokenData>0){
-				$dateToken= $tokenData['create_n'];
-				
-				if($dateNOW > $dateToken)return "2";
+				$dateToken = $tokenData['create_n'];
+
+				if($dateNOW > $dateToken) return "2";
 				else return "1";
 			}
             else return "0"; 
