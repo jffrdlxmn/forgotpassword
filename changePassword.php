@@ -164,7 +164,7 @@ function resetPassword()
     success: function(data){
         if(data == 1)
         {
-            window.location = "sucess.php";
+            window.location = "success.php";
         }
         else{
             $('#message').html("<i class='fas fa-check-circle' text-success> </i> Password Resettng Failed!") +data; 

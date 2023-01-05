@@ -35,23 +35,13 @@
     <div class="card-body text-white text-center">
     <h3 class="text-success"> Your password has been change successfully.</h3>
         <p>You can login with your new password.</p>
-        <a class="btn btn-success w-100" href="https://cvsu-rosario.edu.ph/Teacher_Portal/teacher_portal.php">Continue to Login</a>
+        <a class="btn btn-success w-100 mb-2" href="https://cvsu-rosario.edu.ph/Teacher_Portal/teacher_portal.php">Continue to Login in Teacher portal</a>
+        <a class="btn btn-success w-100" href="https://cvsu-rosario.edu.ph/epayslip/">Continue to Login in E-Payslip</a>
     </div>
     <!-- /.change password-card-body -->
   </div>
 </div>
 <!-- /.success password-box -->
-
-
-
-
-
-
-
-
-
-
-
 
 
 <!-- jQuery -->
